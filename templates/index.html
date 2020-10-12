@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quotes Search Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'mdb.min.css')}}">
+
+  </head>
+
+  <body>
+      <div style="height: 40vh">
+          <div class="flex-center flex-column">
+              <h1 class="animated fadeIn mb-4 display-4">Quotes Search Engine</h1>
+              <h4 class="animated fadeIn mb-3">Search for quotes using Words, Authors or Categories</h4>
+          </div>
+      </div>
+      <form class="form-inline flex-center" style="height: 0vh" action="/result" method="POST">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input name ="query" class="form-control form-control-lg ml-3 w-50 wiki-search-input" type="text" placeholder="Enter Words here..">
+              <button class="btn btn-elegant btn-rounded btn-lg ml-3" type="submit">Search</button>
+      </form>
+      <div style="height: 16vh">
+          <div class="flex-center flex-column">
+              <h5 class="animated fadeIn mb-3">Or Browse Quotes by <a href={{ url_for('authors')}}>Popular Authors</a> or <a href={{ url_for('categories')}}>Categories</a></h5>
+          </div>
+      </div>
+      <div style="height: 10vh">
+          <div class="flex-center flex-column">
+              <h5 class="animated fadeIn mb-3">Designed and developed by Vivek Pratap Deo, Mukesh Basira, Ayush Kumar Tiwary and Srijan Soni</h5>
+              <p class="animated fadeIn text-muted">Thanks for using     &#x1f44d; </p>
+          </div>
+      </div>
+      
+      <script rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'jquery.min.js')}}"></script>
+      <script rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='bootstrap.min.js')}}"></script>
+</body>
+
+</html>

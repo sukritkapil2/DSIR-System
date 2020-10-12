@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Browse Quotes by Categories</title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                    <!-- Font Awesome -->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'bootstrap.min.css')}}">
+                            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'mdb.min.css')}}">
+                                
+                                <body>
+                                    
+                                    <!-- Start your project here-->
+                                    <div style="height: 15vh">
+                                        <div class="flex-center flex-column">
+                                            <h4 class="animated fadeIn mb-3">Search for quotes using Categories</h4>
+                                        </div>
+                                    </div>
+                                    <table>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Arts" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Arts</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Books" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Books</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Death" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Death</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Education" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Education</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Faith" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Faith</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Fight" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Fight</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Friendship" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Friendship</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Funny" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Funny</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="God" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">God</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Happiness" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Happiness</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Hope" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Hope</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Humor" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Humor</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Inspiration" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Inspiration</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Knowledge" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Knowledge</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Life" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Life</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Love" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Love</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Motivation" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Motivation</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Knowledge" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Knowledge</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Philosophy" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Philosophy</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Poetry" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Poetry</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Relationship" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Relationship</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Religion" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Religion</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Romance" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Romance</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Science" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Science</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Success" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Success</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Truth" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Truth</button>
+                                        </form>
+                                        <form action="/result" method="POST">
+                                            <input type="hidden" name="query" value="Wisdom" />
+                                            <button class="btn btn-dark-green btn-rounded ml-3" type="submit">Wisdom</button>
+                                        </form>
+                                    </table>
+                                    <!-- /Start your project here-->
+                                    
+                                    <!-- SCRIPTS -->
+                                    <!-- JQuery -->
+                                    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+                                    <!-- Bootstrap tooltips -->
+                                    <script type="text/javascript" src="js/popper.min.js"></script>
+                                    <!-- Bootstrap core JavaScript -->
+                                    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+                                    <!-- MDB core JavaScript -->
+                                    <script type="text/javascript" src="js/mdb.min.js"></script>
+                                </body>
+                                
+</html>
+

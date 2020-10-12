@@ -37,6 +37,8 @@ def create_authors_list():
     a = list(a)
     a.sort()
     print('\n'.join(a))
+    if not os.path.exists('savers'):
+        os.mkdir('savers')
     with open('savers/authors_list.json', 'w', encoding='utf8') as fp:
         json.dump(a, fp, ensure_ascii=False)
 

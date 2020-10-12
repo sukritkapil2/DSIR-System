@@ -24,7 +24,7 @@ def create_authors_list():
     """
     count = 0
     for file in docFiles:
-        with open("./jsonnn/" + str(file) + ".json") as json_data:
+        with open("./jsonnn/" + str(file) + ".json", encoding='utf8') as json_data:
             document = json.load(json_data)
 
         count += 1

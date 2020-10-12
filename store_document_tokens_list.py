@@ -30,7 +30,7 @@ def create_document_tokens_list():
     count = 0
     for file in docFiles:
         document = dict()
-        with open("./jsonnn/" + str(file) + ".json") as json_data:
+        with open("./jsonnn/" + str(file) + ".json", encoding='utf8') as json_data:
             document = json.load(json_data)
 
         count += 1
@@ -51,7 +51,7 @@ def create_document_tokens_list():
         document_tokens_list.append(temp_doc_tokens)
 
     # storing in json file
-    with open('savers/document_tokens_list.json', 'w') as fp:
+    with open('savers/document_tokens_list.json', 'w', encoding='utf8') as fp:
         json.dump(document_tokens_list, fp)
 
 

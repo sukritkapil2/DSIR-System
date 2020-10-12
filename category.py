@@ -9,7 +9,7 @@ category = []
 for file in docFiles:
 
     document = dict()
-    with open("./jsonnn/" + file) as json_data:
+    with open("./jsonnn/" + file, encoding='utf8') as json_data:
         document = json.load(json_data)
 
     # print(document["Category"])
@@ -18,5 +18,5 @@ for file in docFiles:
         category.append(ct)
 
 category = np.unique(category).tolist()
-with open('savers/category.json', 'w') as fp:
+with open('savers/category.json', 'w', encoding='utf8') as fp:
     json.dump(category, fp)

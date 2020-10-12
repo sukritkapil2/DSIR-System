@@ -1,24 +1,30 @@
 import json
+import os
 
-with open('quotes.json', encoding='utf-8') as json_data:
+with open('books.json', encoding='utf8') as json_data:
     document = json.load(json_data)
 
 
 def jsonconverter():
     """
-    Function for creating json files and then storing in json file for future use
+    Function for creating json files and then storing in json file for further usage
     """
+    count = 0
     i = 0
-    for count, index in enumerate(document):
-        if count % 2 == 1:
-            dictt = {}
-            if len(index['Quote']) > 20:
-                i += 1
-                dictt['Quote'] = index['Quote']
-                dictt['Author'] = index['Author']
-                dictt['Category'] = index['Category']
-                with open(f'jsonnn/{i}.json', 'w', encoding='utf8') as fp:
-                    json.dump(dictt, fp, ensure_ascii=False)
+    for index in document:
+        count += 1
+        dictt = dict()
+        i = i + 1
+        dictt['title'] = index['title']
+        index['authors'] = [a for a in index['authors'] if a != '' and a[0] >= 'A' and a[0] <= 'Z']
+        dictt['authors'] = index['authors']
+        dictt['categories'] = index['categories']
+
+        file = "jsonnn/" + str(i) + ".json"
+        if not os.path.exists('jsonnn'):
+            os.mkdir('jsonnn')
+        with open(file, 'w', encoding='utf8') as fp:
+            json.dump(dictt, fp, ensure_ascii=False)
 
 
 jsonconverter()

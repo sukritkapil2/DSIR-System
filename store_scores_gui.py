@@ -20,35 +20,35 @@ class main_class(object):
     docFiles = [f for f in os.listdir('./jsonnn') if f.endswith(".json")]
     docFiles.sort()
     # documentNormalizedDenominator={}
-    def __build_vocabulary(document_tokens):
-            vocabulary_index=len(vocabulary)-1
-            for word in document_tokens:
-                    if word not in vocabulary:
-                                vocabulary[word] = vocabulary_index
-                                vocabulary_index+= 1
-
-    def buildIDF():
-        for word in vocabulary:
-            for document_tokens in document_tokens_list:
-                if word in document_tokens:
-                    if word in vocabulary_idf:
-                        vocabulary_idf[word] = vocabulary_idf[word] + 1
-                    else:
-                        vocabulary_idf[word] = 1
-
-    def buildFreqDist(document_tokens_list):
-        i=0
-        for document_tokens in document_tokens_list:
-            freqDist[i] = FreqDist(document_tokens)
-            i = i + 1
-            for word in dohota_cument_tokens:
-                vocabulary_idf
-
-    def returnTermFrequency(term, document_tokens, document_tokens_index):
-        return math.log2(1+(freqDist[document_tokens_index][term]/float(len(document_tokens))))
-
-    def returnIdf(term):
-        return math.log2(len(document_tokens_list)/vocabulary_idf[term])
+    # def __build_vocabulary(document_tokens):
+    #         vocabulary_index=len(vocabulary)-1
+    #         for word in document_tokens:
+    #                 if word not in vocabulary:
+    #                             vocabulary[word] = vocabulary_index
+    #                             vocabulary_index+= 1
+    #
+    # def buildIDF():
+    #     for word in vocabulary:
+    #         for document_tokens in document_tokens_list:
+    #             if word in document_tokens:
+    #                 if word in vocabulary_idf:
+    #                     vocabulary_idf[word] = vocabulary_idf[word] + 1
+    #                 else:
+    #                     vocabulary_idf[word] = 1
+    #
+    # def buildFreqDist(document_tokens_list):
+    #     i=0
+    #     for document_tokens in document_tokens_list:
+    #         freqDist[i] = FreqDist(document_tokens)
+    #         i = i + 1
+    #         for word in dohota_cument_tokens:
+    #             vocabulary_idf
+    #
+    # def returnTermFrequency(term, document_tokens, document_tokens_index):
+    #     return math.log2(1+(freqDist[document_tokens_index][term]/float(len(document_tokens))))
+    #
+    # def returnIdf(term):
+    #     return math.log2(len(document_tokens_list)/vocabulary_idf[term])
 
 
 

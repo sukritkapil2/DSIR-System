@@ -15,10 +15,13 @@ def jsonconverter():
         count += 1
         dictt = dict()
         i = i + 1
+        dictt['desc'] = index.get('shortDescription', "")
         dictt['title'] = index['title']
-        index['authors'] = [a for a in index['authors'] if a != '' and a[0] >= 'A' and a[0] <= 'Z']
+        index['authors'] = [a for a in index['authors']
+                            if a != '' and a[0] >= 'A' and a[0] <= 'Z']
         dictt['authors'] = index['authors']
-        index['categories'] = [a.title() for a in index['categories'] if a != '']
+        index['categories'] = [a.title()
+                               for a in index['categories'] if a != '']
         dictt['categories'] = index['categories']
 
         file = "jsonnn/" + str(i) + ".json"

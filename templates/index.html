@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Books Search Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'mdb.min.css')}}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #head1 {
+            font-size: 80px;
+            font-family: "Montserrat";
+            background: -webkit-linear-gradient(rgb(75, 181, 243), rgb(114, 21, 201));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        #head2 {
+            font-size: 80px;
+            font-family: "Montserrat";
+            font-weight: 800;
+        }
+
+        #searchbtn {
+            background: -webkit-linear-gradient(rgb(75, 181, 243), rgb(114, 21, 201));
+            text-transform: capitalize;
+        }
+
+        #attr {
+            margin-top: 120px;
+        }
+
+        a {
+            color: blueviolet;
+        }
+    </style>
+    <script>
+        lan = ['Books',  'Tech', 'Authors'];
+        colors = ['red', 'blue', 'yellow']
+        i = 1;
+
+        
+
+        setInterval(function (){
+            document.getElementById("change-text").innerHTML = lan[i++];
+            i = lan.length === i ? 0 : i;
+        }, 2500);
+    </script>
+  </head>
+
+  <body>
+    
+      <div style="height: 40vh">
+          <div class="flex-center flex-column">
+              <div class="d-flex">
+                <h1 class="animated fadeIn mb-4 display-4" id="head2"><span id="change-text">Books </span></h1>
+                &nbsp;&nbsp;<h1 class="animated fadeIn mb-4 display-4 ml-3" id="head1"><strong>Search Engine</strong></h1></div>
+            
+              <h4 class="animated fadeIn mb-3">Search for books using Title, Authors or Categories</h4>
+          </div>
+      </div>
+      <form class="form-inline flex-center" style="height: 0vh" action="/result" method="POST">
+          <i class="fa fa-lg fa-search" aria-hidden="true" style="color: rgb(122, 79, 202);"></i>
+          <input name ="query" class="form-control form-control-lg ml-3 w-50 wiki-search-input" type="text" placeholder="Enter Words here..">
+              <button class="btn btn-elegant btn-rounded btn-lg ml-3" type="submit" id="searchbtn">Search</button>
+      </form>
+      <div style="height: 16vh">
+          <div class="flex-center flex-column mt-5">
+              <h5 class="animated fadeIn mb-3">Or Browse Books by <a href={{ url_for('authors')}}>Popular Authors</a> or <a href={{ url_for('categories')}}>Categories</a></h5>
+          </div>
+      </div>
+      <div style="height: 10vh;" id="attr">
+          <div class="flex-center flex-column mt-5">
+              <h5 class="animated fadeIn mb-3">Designed and developed by Sukrit, Kumar Pranjal, Mridul Kumar Rai, Sri Satya Aditya Vithanala</h5>
+              <p class="animated fadeIn">Thanks for using our Search Engine</p>
+          </div>
+      </div>
+      
+      <script rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'jquery.min.js')}}"></script>
+      <script rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='bootstrap.min.js')}}"></script>
+</body>
+
+</html>

@@ -9,10 +9,8 @@ def jsonconverter():
     """
     Function for creating json files and then storing in json file for further usage
     """
-    count = 0
     i = 0
     for index in document:
-        count += 1
         dictt = dict()
         i = i + 1
         dictt['desc'] = index.get('shortDescription', "")

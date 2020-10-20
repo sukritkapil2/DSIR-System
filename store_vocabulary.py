@@ -13,8 +13,8 @@ vocabulary = {}
 Function for building the vocabulary i.e. the dictionary which has all the unique words in the corpus
 '''
 def build_vocabulary(document_tokens):
+	
 	vocabulary_index = len(vocabulary)
-
 	# Accsessing words in document tokens list
 	for word in document_tokens:
 		if word not in vocabulary:

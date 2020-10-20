@@ -23,7 +23,7 @@ def create_author_category():
 		for ct in document['categories']:
 			categories_list.append(ct)
 
-	# storing in json file
+	# Listing unique authors and categories
 	a = list(set(authors_list))
 	a.sort()
 	# print('\n'.join(a))

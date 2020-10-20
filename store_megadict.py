@@ -17,7 +17,6 @@ with open('savers/vocabulary.json', encoding='utf8') as json_data:
 vocabulary_idf = {}			# Storing number of documents in which a word is appearing
 freqDist = []				# For storing frequency of each word in a document
 
-
 '''
 function for building the FreqDistribution
 '''

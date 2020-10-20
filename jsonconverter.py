@@ -18,7 +18,7 @@ def jsonconverter():
 		# Extracting info
 		dic['desc'] = index.get('shortDescription', '')
 		dic['title'] = index.get('title', '')
-		dic['authors'] = [a for a in index.get('authors', '') if a != '' and a[0] >= 'A' and a[0] <= 'Z']
+		dic['authors'] = [a for a in index.get('authors', '') if a != '' and 'A' <= a[0] <= 'Z']
 		dic['categories'] = [a.title() for a in index.get('categories', '') if a != '']
 
 		# Creating folder if not exists

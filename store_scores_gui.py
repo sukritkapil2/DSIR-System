@@ -58,7 +58,7 @@ class main_class(object):
 		queryIdf = {}
 		for q in queryDf:
 			if (queryDf[q] != 0):
-				queryIdf[q] = log(main_class.smallcorpusSize / queryDf[q], 10)
+				queryIdf[q] = log(main_class.smallcorpusSize / queryDf[q])
 			else:
 				queryIdf[q] = 1 + log(main_class.smallcorpusSize / (1 + queryDf[q]), 10)
 
@@ -84,7 +84,7 @@ class main_class(object):
 					# print(i)
 					# print(documentNormalizedDenominator[i])
 					# print(innerDict[i]['3'])
-					score[i] += queryWt[q] * innerDict[i]['3'] / documentNormalizedDenominator[i]
+					score[i] += queryWt[q] * (innerDict[i]['3'] / documentNormalizedDenominator[i])
 
 		with open('savers/store.json', 'w', encoding='utf8') as fp:
 			json.dump(score, fp, ensure_ascii=False)
@@ -121,9 +121,8 @@ class main_class(object):
 
 			contents += "</span><span style='font-family: Arial; color: blueviolet'>"
 
-			length = len(document['authors'])
 			for i, content in enumerate(document['authors']):
-				if i != length - 1:
+				if i != len(document['authors']) - 1:
 					contents += f' {content},'
 				else:
 					contents += f' {content}'

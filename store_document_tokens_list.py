@@ -34,7 +34,7 @@ def create_document_tokens_list():
 			words += ' ' + str(category)
 
 		for des in document['desc']:
-			words += ' ' + str(des)
+			words += str(des)
 
 		# Processing relevant words
 		temp_doc_tokens = nltk.word_tokenize(words)

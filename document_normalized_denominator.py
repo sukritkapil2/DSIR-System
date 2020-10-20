@@ -4,12 +4,6 @@
 import json
 
 # Initialization
-with open('./savers/document_tokens_list.json', encoding='utf8') as json_data:
-	document_tokens_list = json.load(json_data)
-
-with open('savers/vocabulary.json', encoding='utf8') as json_data:
-	vocabulary = json.load(json_data)
-
 with open('savers/primeDictionary.json', encoding='utf8') as json_data:
 	primeDictionary = json.load(json_data)
 
@@ -24,11 +18,11 @@ def compute_denominator():
 	for innerDict in primeDictionary.values():
 		for i in innerDict:
 			documentNormalizedDenominator[i] = 0
-			score[i]=0
+			score[i] = 0
 
 	for innerDict in primeDictionary.values():
 		for i in innerDict:
-			documentNormalizedDenominator[i] += (innerDict[i]['3'] ** 2)
+			documentNormalizedDenominator[i] += innerDict[i]['3'] ** 2
 
 	documentNormalizedDenominator = {key: value ** 0.5 for key, value in documentNormalizedDenominator.items()}
 

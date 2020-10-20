@@ -114,7 +114,7 @@ class main_class(object):
 			with open(f'./jsonnn/{f}.json', encoding='utf8') as json_data:
 				document = json.load(json_data)
 
-			contents = '<strong>' + document['title'] + '</strong>' + '<br></br>' + '<span>' + document['desc']
+			contents = '<img src=\"' + document['thumbnailUrl'] + '\" alt=\"' + document['title'] + '\">' + '<br></br> <strong>' + document['title'] + '</strong>' + '<br></br>' + '<span>' + document['desc']
 
 			if(len(document['desc']) != 0):
 				contents += '<br></br>'

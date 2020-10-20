@@ -18,6 +18,7 @@ def jsonconverter():
 		# Extracting info
 		dic['desc'] = index.get('shortDescription', '')
 		dic['title'] = index.get('title', '')
+		dic['thumbnailUrl'] = index.get('thumbnailUrl', '')
 		dic['authors'] = [a for a in index.get('authors', '') if a != '' and 'A' <= a[0] <= 'Z']
 		dic['categories'] = [a.title() for a in index.get('categories', '') if a != '']
 

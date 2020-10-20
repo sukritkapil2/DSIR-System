@@ -60,7 +60,7 @@ class main_class(object):
 			if (queryDf[q] != 0):
 				queryIdf[q] = log(main_class.smallcorpusSize / queryDf[q])
 			else:
-				queryIdf[q] = 1 + log(main_class.smallcorpusSize / (1 + queryDf[q]), 10)
+				queryIdf[q] = 1 + log(main_class.smallcorpusSize / 1 + queryDf[q], 10)
 
 		queryDict = {key: log(1 + (value / float(numOfWords))) for key, value in queryDict.items()}
 

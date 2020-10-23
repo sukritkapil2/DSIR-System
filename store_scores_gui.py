@@ -60,7 +60,7 @@ class main_class(object):
 			if (queryDf[q] != 0):
 				queryIdf[q] = log(main_class.smallcorpusSize / queryDf[q])
 			else:
-				queryIdf[q] = 1 + log(main_class.smallcorpusSize / 1 + queryDf[q], 10)
+				queryIdf[q] = 1 + log(main_class.smallcorpusSize / (1 + queryDf[q]), 10)
 
 		queryDict = {key: log(1 + (value / float(numOfWords))) for key, value in queryDict.items()}
 
@@ -114,7 +114,7 @@ class main_class(object):
 			with open(f'./jsonnn/{f}.json', encoding='utf8') as json_data:
 				document = json.load(json_data)
 
-			contents = '<strong>' + document['title'] + '</strong>' + '<br></br>' + '<span>' + document['desc']
+			contents = '<img src=\"' + document['thumbnailUrl'] + '\" alt=\"' + document['title'] + '\">' + '<br></br> <strong>' + document['title'] + '</strong>' + '<br></br>' + '<span>' + document['desc']
 
 			if(len(document['desc']) != 0):
 				contents += '<br></br>'

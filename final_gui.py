@@ -8,23 +8,13 @@ from flask import Flask, redirect, url_for, request, render_template
 app = Flask(__name__)
 
 '''
-This is the category page where you can search for the quotes by categories
+This is the about page
 '''
-@app.route('/categories', methods=['GET', 'POST'])
-def categories():
+@app.route('/about', methods=['GET', 'POST'])
+def about():
 	if request.method == 'POST':
 		return redirect(url_for('index'))
-	return render_template('categories.html')
-
-
-'''
-This is the authors page where you can search for the quotes by author's name. The list is sorted alphabetically.
-'''
-@app.route('/authors', methods=['GET', 'POST'])
-def authors():
-	if request.method == 'POST':
-		return redirect(url_for('index'))
-	return render_template('authors.html')
+	return render_template('about.html')
 
 '''
 This is the homepage
@@ -34,7 +24,7 @@ def homepage():
 	return render_template('index.html')
 
 '''
-	This is the Result page which shows the most relevant 10 quotes.
+This is the Result page which shows the most relevant 10 quotes.
 '''
 @app.route('/result', methods=['POST', 'GET'])
 def result():

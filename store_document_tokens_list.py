@@ -23,11 +23,13 @@ Function for creating document_tokens_list and then storing in json file for fur
 
 
 def create_document_tokens_list():
+    """
+    Function for creating document_tokens_list and then storing in json file for further usage
+    """
     for file in docFiles:
         document = {}
         with open(f'./jsonnn/{file}.json', encoding='utf8') as json_data:
             document = json.load(json_data)
-
         # Creating relevant words list
         words = str(document['title'])
         for author in document['authors']:

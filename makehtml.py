@@ -1,6 +1,10 @@
 import json
 
+<<<<<<< HEAD
 with open("./savers/authors_list.json", encoding='utf8') as json_data:
+=======
+with open('./savers/authors_list.json', encoding='utf8') as json_data:
+>>>>>>> pranjal
     document = json.load(json_data)
 
 htmlString = "<div class='row mt-2'>"

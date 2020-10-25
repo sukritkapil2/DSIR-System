@@ -1,9 +1,16 @@
 import json
 
+<<<<<<< HEAD
 with open("./savers/category.json", encoding='utf8') as json_data:
     document = json.load(json_data)
 
 htmlString = ""
+=======
+with open('./savers/category.json', encoding='utf8') as json_data:
+    document = json.load(json_data)
+
+htmlString = ''
+>>>>>>> pranjal
 
 for category in document:
     htmlString += "<form action='/result' method='POST'><input type='hidden' name='query' value=" + category + \

@@ -9,7 +9,7 @@ i = 0
 
 for author in document:
     i += 1
-    htmlString += "<div class='ml-2' style='display: block; padding: 20px; background-color: blueviolet;border-radius: 10px';><form action='/result' method='POST'><input type='hidden' name='query' value=" + str(author) + "/><button class='text-white' style='font-family: Montserrat; font-weight: 400; background: none; border: none; outline: none; cursor: pointer'>" + \
+    htmlString += "<div class='ml-2' style='display: block; padding: 20px; background-color: blueviolet;border-radius: 10px';><form action='/result' method='POST'><input type='hidden' name='query' value='" + str(author) + "'/><button class='text-white' style='font-family: Montserrat; font-weight: 400; background: none; border: none; outline: none; cursor: pointer'>" + \
         str(author) + "</button></form></div>"
     if (i % 5 == 0):
         htmlString += "</div><div class='row mt-2'>"

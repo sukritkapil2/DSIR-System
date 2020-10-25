@@ -14,9 +14,6 @@ with open('savers/primeDictionary.json', encoding='utf8') as json_data:
 with open('savers/normaliseddenom.json', encoding='utf8') as json_data:
 	documentNormalizedDenominator = json.load(json_data)
 
-with open('savers/score.json', encoding='utf8') as json_data:
-	score = json.load(json_data)
-
 class main_class(object):
 	smallcorpusSize = 500
 	queryStr = ''	# query from userinput
@@ -25,7 +22,11 @@ class main_class(object):
 	Function for inputting query and performing query based operations and finally calculating cosine scores
 	'''
 	@staticmethod
-	def terminal_function():		
+	def terminal_function():
+
+		with open('savers/score.json', encoding='utf8') as json_data:
+			score = json.load(json_data)
+
 		words = main_class.queryStr
 		temp_doc_tokens = word_tokenize(words)
 		temp_doc_tokens = [w.lower() for w in temp_doc_tokens]
@@ -60,7 +61,7 @@ class main_class(object):
 			if (queryDf[q] != 0):
 				queryIdf[q] = log(main_class.smallcorpusSize / queryDf[q])
 			else:
-				queryIdf[q] = 1 + log(main_class.smallcorpusSize / (1 + queryDf[q]), 10)
+				queryIdf[q] = 1 + log(main_class.smallcorpusSize / 1 + queryDf[q], 10)
 
 		queryDict = {key: log(1 + (value / float(numOfWords))) for key, value in queryDict.items()}
 

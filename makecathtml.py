@@ -1,13 +1,13 @@
 import json
 
-with open("./savers/category.json", encoding='utf8') as json_data:
+with open('./savers/category.json', encoding='utf8') as json_data:
     document = json.load(json_data)
 
-htmlString = ""
+htmlString = ''
 
 for category in document:
-    htmlString += "<form action='/result' method='POST'><input type='hidden' name='query' value='" + category + \
-        "'/>" + "<button class='btn btn-dark-green btn-rounded ml-3' type='submit'>" + \
+    htmlString += "<form action='/result' method='POST'><input type='hidden' name='query' value=" + category + \
+        "/>" + "<button class='btn btn-dark-green btn-rounded ml-3' type='submit'>" + \
         category + "</button></form>"
 
 print(htmlString)

@@ -61,10 +61,9 @@
       <div style="height: 40vh">
           <div class="flex-center flex-column">
               <div class="d-flex">
-                <h1 class="animated fadeIn mb-4 display-4" id="head2"><span id="change-text">Books </span></h1>
-                &nbsp;&nbsp;<h1 class="animated fadeIn mb-4 display-4 ml-3" id="head1"><strong>Search Engine</strong></h1></div>
+                <h1 class="animated fadeIn mb-4 display-4 ml-3" id="head1"><strong>Books Search Engine</strong></h1></div>
             
-              <h4 class="animated fadeIn mb-3">Search for books using Title, Authors or Categories</h4>
+              <h4 class="animated fadeIn mb-3">Search by title, author, or category</h4>
           </div>
       </div>
       <form class="form-inline flex-center" style="height: 0vh" action="/result" method="POST">
@@ -72,15 +71,10 @@
           <input name ="query" class="form-control form-control-lg ml-3 w-50 wiki-search-input" type="text" placeholder="Enter Words here..">
               <button class="btn btn-elegant btn-rounded btn-lg ml-3" type="submit" id="searchbtn">Search</button>
       </form>
-      <div style="height: 16vh">
-          <div class="flex-center flex-column mt-5">
-              <h5 class="animated fadeIn mb-3">Or Browse Books by <a href={{ url_for('authors')}}>Popular Authors</a> or <a href={{ url_for('categories')}}>Categories</a></h5>
-          </div>
-      </div>
+      
       <div style="height: 10vh;" id="attr">
           <div class="flex-center flex-column mt-5">
-              <h5 class="animated fadeIn mb-3">Designed and developed by Sukrit, Kumar Pranjal, Mridul Kumar Rai, Sri Satya Aditya Vithanala</h5>
-              <p class="animated fadeIn">Thanks for using our Search Engine</p>
+              <p style="font-size: 20px;"class="animated fadeIn"> <a href="{{ url_for('about')}}">About</a> </p>
           </div>
       </div>
       
